@@ -1,0 +1,23 @@
+.categories-panel {
+  background: white;
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 6px 18px rgba(2,6,23,0.06);
+}
+
+.categories-panel h3 {
+  margin: 0 0 8px 0;
+}
+
+.categories-panel ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.categories-panel li {
+  padding: 8px 10px;
+  border-radius: 6px;
+  margin-bottom: 6px;
+  background: #f8fafc;
+}

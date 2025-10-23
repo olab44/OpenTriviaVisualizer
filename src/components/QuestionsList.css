@@ -1,0 +1,26 @@
+.questions-list {
+  background: white;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(2,6,23,0.06);
+}
+
+.questions-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.questions-list li {
+  padding: 10px;
+  border-bottom: 1px dashed #e6eef6;
+}
+
+.questions-list .q {
+  font-weight: 600;
+}
+
+.questions-list .a {
+  color: #64748b;
+  font-size: 13px;
+}
