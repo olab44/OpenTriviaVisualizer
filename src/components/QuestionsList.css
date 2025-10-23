@@ -12,7 +12,7 @@
 }
 
 .questions-list li {
-  padding: 10px;
+  padding: 12px 10px;
   border-bottom: 1px dashed #e6eef6;
 }
 
@@ -23,4 +23,17 @@
 .questions-list .a {
   color: #64748b;
   font-size: 13px;
+}
+
+.questions-list {
+  max-height: 120vh;
+  overflow: auto;
+}
+
+.questions-list::-webkit-scrollbar {
+  width: 10px;
+}
+.questions-list::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 8px;
 }

@@ -25,11 +25,18 @@ return (
         <div className="grid-row">
           <div className="left-col">
             <CategoriesPanel categories={categories} selected={selectedCategory} onSelect={setSelectedCategory} />
-            <DistributionPanel />
+          </div>
+
+          <div className="center-col">
+            <QuestionsList questions={filtered} />
           </div>
 
           <div className="right-col">
-            <QuestionsList questions={filtered} />
+            <div className="stats-box">
+              <h4>Stats</h4>
+            </div>
+
+            <DistributionPanel questions={filtered} />
           </div>
         </div>
       </Layout>

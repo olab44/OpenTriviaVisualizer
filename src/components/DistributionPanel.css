@@ -1,18 +1,22 @@
 .distribution-panel {
   display: flex;
-  gap: 16px;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .dist-card {
-  flex: 1;
   background: white;
   padding: 12px;
   border-radius: 8px;
   box-shadow: 0 6px 18px rgba(2,6,23,0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 180px;
 }
 
 .placeholder {
-  height: 140px;
+  flex: 1 1 auto;
   display: flex;
   align-items: center;
   justify-content: center;
