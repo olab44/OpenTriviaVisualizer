@@ -1,34 +1,39 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import React from 'react'
 import './App.css'
+import { useFetchTrivia } from './hooks/useFetchTrivia'
 
-function App() {
-  const [count, setCount] = useState(0)
+export const App: React.FC = () => {
+  const { questions, loading, error } = useFetchTrivia()
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className="app">
+      <header className="app-header">
+        <h1> Open Trivia Dashboard</h1>
+      </header>
+
+      <main className="app-main">
+        {loading && (
+          <div className="loading">Loading ...</div>
+        )}
+
+        {error && (
+          <div className="error">
+            <p>Error: {error}</p>
+            <div style={{ marginTop: 10 }}>
+            </div>
+          </div>
+        )}
+
+        {!loading && !error && (
+          <section className="data-preview">
+            <p>Number of questions: {questions.length}</p>
+              <pre style={{ whiteSpace: 'pre-wrap', fontSize: 12 }}>
+                {JSON.stringify(questions, null, 2)}
+              </pre>
+          </section>
+        )}
+      </main>
+    </div>
   )
 }
 
