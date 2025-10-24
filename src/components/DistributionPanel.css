@@ -1,18 +1,19 @@
 .distribution-panel {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 8px;
 }
 
 .dist-card {
   background: white;
-  padding: 12px;
+  padding: 8px;
   border-radius: 8px;
   box-shadow: 0 6px 18px rgba(2,6,23,0.06);
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  min-height: 180px;
+  gap: 8px;
+  min-height: 260px;
+  overflow: visible;
 }
 
 .placeholder {
@@ -23,4 +24,10 @@
   color: #64748b;
   border-radius: 6px;
   background: linear-gradient(180deg, #f8fafc, #ffffff);
+}
+
+.dist-card > h4 {
+  margin: 0;
+  font-size: 1rem;
+  padding-bottom: 4px;
 }

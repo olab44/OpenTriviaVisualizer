@@ -1,32 +1,44 @@
 .layout-root {
-  padding: 12px;
-  max-width: 95vw;
+  padding: 20px;
+  max-width: 100%;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  box-sizing: border-box;
 }
 
 .grid-row {
   display: flex;
   gap: 20px;
   margin-top: 18px;
+  align-items: stretch;
+  flex: 1 1 auto;
 }
 
 .left-col {
-  flex: 0 0 240px;
+  flex: 0 0 320px;
   display: flex;
   flex-direction: column;
   gap: 16px;
+  min-height: 0;
 }
 
 .center-col {
   flex: 1 1 1px;
-  min-width: 720px;
+  width: 680px;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  max-height: 102vh;
 }
 
 .right-col {
-  flex: 0 0 420px;
+  flex: 0 0 480px;
   display: flex;
   flex-direction: column;
   gap: 16px;
+  min-height: 0;
 }
 
 .app .app-header {

@@ -32,11 +32,7 @@ return (
           </div>
 
           <div className="right-col">
-            <div className="stats-box">
-              <h4>Stats</h4>
-            </div>
-
-            <DistributionPanel questions={filtered} />
+            <DistributionPanel questions={questions} />
           </div>
         </div>
       </Layout>
